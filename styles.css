@@ -1,0 +1,38 @@
+.body{
+    background-color: navy;
+    width: 100%;
+    position: relative;
+}
+
+.photo{
+    display: block;
+    width: 50%;
+    height:auto;
+    margin-left:  auto; 
+    margin-right: auto;
+}
+
+.photomom{
+    display: block;
+    width: 60%;
+    height:auto;
+    margin-top: 5%; 
+    margin-left:  auto; 
+    margin-right: auto;
+}
+
+.button{
+    display: block;
+    background: transparent;
+    width: 60%;
+    margin-top: 5%; 
+    margin-left:  auto; 
+    margin-right: auto;
+}
+
+.star {
+    position: absolute;
+    width: 20%;
+    top: 10%;
+    left: 100%;
+}
