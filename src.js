@@ -1,115 +1,115 @@
+// find the star 
+const star = document.getElementById("star");
+// intialize side as left, so that the first star will always come from the right when it gets swapped  
+var side = "left"; 
 
+// set up interval to make a shooting star every 5 seconds 
+setInterval(function makeStarShoot() {
+    // switch up the side that it's coming from 
+    side = (side == "right") ? "left" : "right"; 
+    // call function that will bring animation
+    starShoot(side);
+}, 5000);
 
-// identify star 
-star = document.getElementById("star"); 
-// initialize variables
-var side; 
-var top;
-var left;
-var starting_quadrant; 
+// this function will make the animation happen 
+function starShoot(start_side) {
+    // set id as null so that we can clear the animation 
+    id = null; 
 
-// set initial position of star 
-setInitialPos(star);
-// set star to be visible 
-star.style.visibility = "visible";
+    // set up the initial position of the star 
+    // left (distance from left of screen), determined by what side it starts on
+    var current_left = initiateLeft(start_side);
+    star.style.left = current_left + "%";
+    // top (distance from top of screen)
+    var current_top = initiateTop(); 
+    star.style.top = current_top + "%";
+    // quadrant (whether it is in upper or lower portion)
+    var start_quadrant = getQuadrant(current_top);
+    // rotate the star according to where it starts from 
+    transform(start_side, start_quadrant);
 
-function setInitialPos(star) {
-    // decide whether star is coming from left or from right
-    // starts as random, then alternates 
-    if (side === undefined) {
-        side = Math.random() > 0.5 ? "left" : "right";
-    }
-    side = (side == "right") ? "left" : "right";
+    // then, start the animation 
+    clearInterval(id);
+    id = setInterval(shoot, 10);
 
-
-    // decide the vertical axis
-    // choose random top value between 10 and 100 
-    const min = 10;
-    const max = 80;
-    top = Math.floor(Math.random() * (max - min + 1)) + min;
-    star.style.top = top + "%";
-
-    // declare variable for upper/lower 
-    starting_quadrant = (top > (max - min) / 2) ? "upper" : "lower"; 
-
-    if (side == "left") {
-        left = -30;
-        star.style.left = -30 + "%";
-
-        // flip image 
-        if (starting_quadrant == "upper") {
-            star.transform.scaleX = -1;
-        } 
-        if (starting_quadrant == "lower") {
-            star.transform.scale = (-1, 1);
-        }
-    }
-
-    if (side == "right") {
-        left = 130;
-        star.style.left = 130 + "%";
-
-        // flip bottom image 
-        if (starting_quadrant == "lower") {
-            star.transform.scaleY = -1;
-        }
-    }
-}
-
-
-
-setInterval(
-    function frame() {
-        // if it has reached the other side 
-        if (side == "left" && left == 130 || side == "right" && left == -30) {
+    function shoot() {
+        // if you have reached the target location, which depends on the side  
+        if (atTarget(start_side, current_left)) {
             clearInterval(id);
         } else {
-             moveStar(star);
-        }
-        function moveStar(star) {
-            // star moves according to the side it starts on & where it started on that side
-            if (side == "left" && starting_quadrant == "upper") {
+            // then, we need to move the piece 
+            if (side == "left" && start_quadrant == "upper") {
                 top ++; 
                 left ++; 
             } 
-            if (side == "left" && starting_quadrant == "lower") {
+            if (side == "left" && start_quadrant == "lower") {
                 top --;
                 left ++; 
             }
-            if (side == "right" && starting_quadrant == "upper") {
+            if (side == "right" && start_quadrant == "upper") {
                 top ++;
                 left --; 
             }
-            if (side == "right" && starting_quadrant == "lower") {
+            if (side == "right" && start_quadrant == "lower") {
                 top --;
                 left --;
             }
             star.style.top = top + "%";
-            star.style.left = left + "%";        
+            star.style.left = left + "%";   
         }
-    }, 10);
+    }
+}
 
+// this function will choose the starting distance from the left of the screen
+// basically, it will give the % number for left or right 
+function initiateLeft(start_side){
+    // if it starts on the left, then start it at -30. if right, then 130. 
+    var left = (start_side == "left") ? -30 : 130;
+    return left; 
+}
 
+// this function will choose the starting distance from the top of the screen
+function intiateTop() {
+    // random number between the min and the max 
+    const min = 10;
+    const max = 80;
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+}
 
-// var id = null;
+// this function determines if the star is in the upper or lower quadrant 
+function getQuadrant(start_top) {
+    // if the start_top is less than the mid-way line, then it is upper 
+    // otherwise, lower! 
+    if (start_top < (max - min) / 2) {
+        return "upper";
+    } else {
+        return "lower";
+    }
+}
 
-// function myMove(){
-//     var star = document.getElementById("star"); 
-//     var top = 10;
-//     var left = 100;
-    
-//     clearInterval(id);
-//     id = setInterval(frame, 10);
+// this function will turn the star the appropriate direction as to where it's heading 
+function transform(start_side, start_quadrant) {
+    // upper left 
+    if (start_quadrant == "upper" && start_side == "left") {
+        star.style.transform.scaleX = - 1; 
+    }
+    // lower left 
+    if (start_quadrant == "lower" && start_side == "left") {
+        star.style.transform.scale = (- 1, - 1); 
+    }
+    // upper right does not need to transform
+    // lower right 
+    if (start_quadrant == "lower" && start_side == "right") {
+        star.style.transform.scaleY = - 1;
+    }
+}
 
-//     function frame() {
-//         if (left == -30) {
-//             clearInterval(id);
-//         } else {
-//             top ++;
-//             left --;
-//             star.style.top = top + "%";
-//             star.style.left = left + "%";
-//         }
-//     }
-
-// }
+// this function will tell you whether you have hit the end of the animation, 
+// depending on what side you started on 
+function atTarget(start_side, current_left) {
+    if ((start_side == "left" && current_left == 130) || (start_side == "right" && current_left == -30)) {
+        return true;
+    } else {
+        return false; 
+    }
+}
