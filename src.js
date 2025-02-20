@@ -6,16 +6,13 @@ var side = "left";
 // set up interval to make a shooting star every 5 seconds 
 setInterval(function makeStarShoot() {
     // switch up the side that it's coming from 
-    side = (side == "right") ? "left" : "right"; 
+    side = (side == "right") ? "left" : "right";
     // call function that will bring animation
     starShoot(side);
-}, 5000);
+}, 3000);
 
 // this function will make the animation happen 
 function starShoot(start_side) {
-    // set id as null so that we can clear the animation 
-    id = null; 
-
     // set up the initial position of the star 
     // left (distance from left of screen), determined by what side it starts on
     var current_left = initiateLeft(start_side);
@@ -27,10 +24,11 @@ function starShoot(start_side) {
     var start_quadrant = getQuadrant(current_top);
     // rotate the star according to where it starts from 
     transform(start_side, start_quadrant);
+    // then, make visible! 
+    star.style.visibility = "visible";
 
     // then, start the animation 
-    clearInterval(id);
-    id = setInterval(shoot, 10);
+    var id = setInterval(shoot, 10);
 
     function shoot() {
         // if you have reached the target location, which depends on the side  
@@ -39,23 +37,23 @@ function starShoot(start_side) {
         } else {
             // then, we need to move the piece 
             if (side == "left" && start_quadrant == "upper") {
-                top ++; 
-                left ++; 
+                current_top ++; 
+                current_left ++; 
             } 
             if (side == "left" && start_quadrant == "lower") {
-                top --;
-                left ++; 
+                current_top --;
+                current_left ++; 
             }
             if (side == "right" && start_quadrant == "upper") {
-                top ++;
-                left --; 
+                current_top ++;
+                current_left --; 
             }
             if (side == "right" && start_quadrant == "lower") {
-                top --;
-                left --;
+                current_top --;
+                current_left --;
             }
-            star.style.top = top + "%";
-            star.style.left = left + "%";   
+            star.style.top = current_top + "%";
+            star.style.left = current_left + "%";   
         }
     }
 }
@@ -69,7 +67,7 @@ function initiateLeft(start_side){
 }
 
 // this function will choose the starting distance from the top of the screen
-function intiateTop() {
+function initiateTop() {
     // random number between the min and the max 
     const min = 10;
     const max = 80;
@@ -80,7 +78,7 @@ function intiateTop() {
 function getQuadrant(start_top) {
     // if the start_top is less than the mid-way line, then it is upper 
     // otherwise, lower! 
-    if (start_top < (max - min) / 2) {
+    if (start_top < 45) {
         return "upper";
     } else {
         return "lower";
