@@ -22,9 +22,9 @@
 }
 
 .button{
-    display: block;
     background: transparent;
     width: 60%;
+    height: 43%;
     margin-top: 5%; 
     margin-left:  auto; 
     margin-right: auto;
