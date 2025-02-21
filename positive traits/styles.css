@@ -22,7 +22,7 @@
   .happy_birthday { grid-area: happy_birthday;}
   
   .text { grid-area: text;
-        font-family: monospace;
+        font-family: Trattatello;
     }
 
   .menu {
