@@ -21,18 +21,6 @@
     margin-right: auto;
 }
 
-.button{
-    display: block;
-    background: url("photos/momonhover.png");
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-    height: 80%;
-    margin-top: 5%; 
-    margin-left:  auto; 
-    margin-right: auto;
-}
-
 .star {
     position: absolute;
     width: 20%;
