@@ -21,11 +21,13 @@
   
   .happy_birthday { grid-area: happy_birthday;}
   
-  .text { grid-area: text;}
+  .text { grid-area: text;
+        font-family: monospace;
+    }
 
   .menu {
     display: block;
-    height: 90%;
+    height: 100%;
     width: auto;
     margin-left: auto;
     margin-right: auto;
