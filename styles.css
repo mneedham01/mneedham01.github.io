@@ -22,9 +22,12 @@
 }
 
 .button{
-    background: transparent;
+    display: block;
+    background: url("photos/momonhover.png");
+    background-size: cover;
+    background-position: center;
     width: 60%;
-    height: 43%;
+    height: 80%;
     margin-top: 5%; 
     margin-left:  auto; 
     margin-right: auto;
@@ -37,4 +40,14 @@
     left: 100%;
     visibility: hidden;
     transform: scale(-1, -1);
+}
+
+
+.l{
+    display: relative;
+    width: 60%;
+    margin-top: 5%; 
+    margin-left:  auto; 
+    margin-right: auto;
+    text-decoration: none;
 }
