@@ -31,7 +31,7 @@ function starShoot(start_side) {
     var min = 5; 
     var max = 20;
     var interval = Math.floor(Math.random() * (max - min + 1)) + min;
-    var id = setInterval(shoot, interval);
+    var id = setInterval(shoot, 15);
 
     function shoot() {
         // if you have reached the target location, which depends on the side  
