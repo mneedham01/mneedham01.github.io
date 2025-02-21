@@ -118,10 +118,10 @@ function atTarget(start_side, current_left) {
 // this function will change pic of mom to the one with hearts 
 function addHearts() {
     var pic = document.getElementById("mom");
-    pic.src = "../photos/momwithhearts.png";
+    pic.src = "photos/momwithhearts.png";
 }
 
 function takeAwayHearts() {
     var pic = document.getElementById("mom");
-    pic.src = "../photos/mom.png";
+    pic.src = "photos/mom.png";
 }
