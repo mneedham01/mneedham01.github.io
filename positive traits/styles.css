@@ -22,7 +22,8 @@
   .happy_birthday { grid-area: happy_birthday;}
   
   .text { grid-area: text;
-        font-family: Trattatello;
+        font-family: Luminari;
+        font-size: 20px;
     }
 
   .menu {
@@ -38,5 +39,6 @@
     margin-top: 10%;
     margin-left: 10%;
     margin-right: auto;
+    color:saddlebrown;
   }
   
