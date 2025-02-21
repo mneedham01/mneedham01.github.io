@@ -5,13 +5,19 @@ function enlarge(id) {
     elem.src = "../photos/" + id + "_bedazzled.png";
 
     // shrink things to love 
-    shrink("things_to_love");
+    things_to_love = document.getElementById("things_to_love");
+    things_to_love.style.height = "90%";
+    things_to_love.src = "../photos/things_to_love.png";
+
 }
 
 function shrink(id) {
     elem = document.getElementById(id);
     elem.style.height = "90%";
     elem.src = "../photos/" + id + ".png";
+
     // enlarge things to love 
-    enlarge("things_to_love")
+    things_to_love = document.getElementById("things_to_love");
+    things_to_love.style.height = "100%";
+    things_to_love.src = "../photos/things_to_love_bedazzled.png";
 }
