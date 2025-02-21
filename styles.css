@@ -39,3 +39,10 @@
     margin-right: auto;
     text-decoration: none;
 }
+
+.click-here{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: palevioletred;
+}

@@ -9,7 +9,7 @@ setInterval(function makeStarShoot() {
     side = (side == "right") ? "left" : "right";
     // call function that will bring animation
     starShoot(side);
-}, 3000);
+}, 2000);
 
 // this function will make the animation happen 
 function starShoot(start_side) {
@@ -117,7 +117,7 @@ function atTarget(start_side, current_left) {
 
 // this function will change pic of mom to the one with hearts 
 function addHearts() {
-    var pic = document.getElementById("mom");
+    pic = document.getElementById("mom");
     pic.src = "photos/momwithhearts.png";
 }
 
