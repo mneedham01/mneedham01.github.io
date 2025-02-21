@@ -24,12 +24,10 @@
 .star {
     position: absolute;
     width: 20%;
-    top: 80%;
-    left: 100%;
+    top: 10%;
+    left: 0%;
     visibility: hidden;
-    transform: scale(-1, -1);
 }
-
 
 .l{
     display: relative;
