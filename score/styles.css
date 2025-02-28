@@ -1,0 +1,8 @@
+.body {
+    background-color: pink;
+}
+.figure {
+    visibility: hidden;
+    width: 200 px; 
+    height: auto;
+}
