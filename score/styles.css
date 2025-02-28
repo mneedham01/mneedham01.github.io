@@ -1,7 +1,5 @@
-.body {
-    background-color: pink;
-}
 .figure {
     position: absolute;
     visibility: hidden;
+    width: 70%; 
 }
