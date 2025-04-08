@@ -1,0 +1,17 @@
+.header{
+    height: 10vh;
+}
+body{
+    text-align: center;
+    position: relative;
+    width: 100vh;
+    left: 40vh;
+}
+
+.text{
+    position: absolute; 
+    justify-content: center;
+    top: 50vh;
+    left: 50vh;
+    width: 100vh;
+}
