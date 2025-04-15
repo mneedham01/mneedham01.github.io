@@ -3,16 +3,9 @@
 }
 body{
     position: relative; 
+    text-align: center;
 }
-.column1{
-    position: absolute; 
-    width: 70vh;
-    left: 10vh;
-    text-align: left;
-}
-.column2{
-    position: absolute;
-    width: 70vh;
-    left: 90vh;
-    text-align: right;
+.frame{
+    width: 90vh;
+    border: none;
 }
