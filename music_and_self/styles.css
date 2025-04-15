@@ -1,0 +1,18 @@
+.header{
+    height: 10vh;
+}
+body{
+    position: relative; 
+}
+.column1{
+    position: absolute; 
+    width: 70vh;
+    left: 10vh;
+    text-align: left;
+}
+.column2{
+    position: absolute;
+    width: 70vh;
+    left: 90vh;
+    text-align: right;
+}
