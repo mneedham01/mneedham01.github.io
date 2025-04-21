@@ -6,11 +6,15 @@ body{
     text-align: center;
 }
 .frame{
-    width: 90vh;
-    border: none;
+    width: 150vh;
+    height: 2000vh;
 }
 
 .citation{
     font-size: 12px;
     font-style: italic;
+}
+
+.frame-within{
+    width: 150vh;
 }
