@@ -9,3 +9,8 @@ body{
     width: 90vh;
     border: none;
 }
+
+.citation{
+    font-size: 12px;
+    font-style: italic;
+}
