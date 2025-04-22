@@ -6,6 +6,7 @@ body{
     background-size: 20vh;
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
+    height: 600vh;
 }
 button{
     border: none; 
@@ -64,4 +65,9 @@ button{
 
 .right-wrapper {
     width: 60vw;
+}
+
+.random-div{
+    width: 40vw;
+    position: absolute;
 }

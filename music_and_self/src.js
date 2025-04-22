@@ -312,15 +312,9 @@ function translator(id) {
 var counter = 1; 
 
 function createObject(quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
-    // create a new div within column that 
-    var column = document.getElementById("column");
-    // get side 
-    var wrapper = document.createElement("div");
-    if (counter % 2 == 0) {
-        wrapper.setAttribute("class", "left-wrapper");
-    } else {
-        wrapper.setAttribute("class", "right-wrapper");
-    }
+   // create the new div 
+    var wrapper = createRandomlyPlacedDiv();
+
     var quote_div = document.createElement("div");
     quote_div.setAttribute("class", "quote");
     quote_div.innerHTML = `${quote}`;
@@ -365,3 +359,30 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
     counter += 1; 
 }
 
+var div_counter = 0; 
+
+function createRandomlyPlacedDiv() {
+    var div = document.createElement("div");
+    div.setAttribute("class", "random-div");
+    div.style.left = randomLeft() + "vw";
+    var new_id_num = div_counter + 1; 
+    var new_id = "div_" + new_id_num;
+    div.setAttribute("id", new_id);
+    if (div_counter == 0) {
+        div.style.top = "10vh";
+    } else {
+        var prev_id = "div_" + div_counter;
+        var prev_div = document.getElementById(prev_id);
+        const rect = prev_div.getBoundingClientRect();
+        const absolutePixels = rect.top + rect.height + window.scrollY;
+        const vh = (absolutePixels / window.innerHeight) * 100;
+        div.style.top = vh + "vh";
+    }
+    div_counter += 1;
+    return div; 
+}
+
+function randomLeft() {
+    var max_left = 50;
+    return Math.floor(Math.random() * max_left); 
+}
