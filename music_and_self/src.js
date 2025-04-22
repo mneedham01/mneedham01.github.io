@@ -13,7 +13,7 @@ function translator(id) {
 
     if (id === "2") {
         createObject('"The self, configured as a unitary, autonomous individual in possession of an essential subjectivity, is one of the linchpins of modern social organization.”',
-            'Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999, Pages 31-56, ISSN 0304-422X, https://doi.org/10.1016/S0304-422X(99)00017-0.',
+            'Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.',
             "7", 
             'How is this self constructed?',
             "25",
@@ -70,14 +70,16 @@ function translator(id) {
             "“Through myriad acts of everyday consumption – from the songs we listen to, to the products we buy – we produce our identity and modulate ourselves as individuals.”",
             "Prey, R. (2017). Nothing personal: algorithmic individuation on music streaming platforms. <i>Media, Culture & Society</i>, 40(7), 1086–1100. https://doi.org/10.1177/0163443717745147",
             "11",
-            "Our identity is always in flux."
+            "There is more to me than my consumption.",
+            "4",
+            "There is agency in the production of identity."
         );
     }
     
     if (id === "8") {
         createObject(
             'In the "composting of past experiences," "music again comes to the fore, as part of the retinue of devices for memory retrieval (which is, of course, simultaneously memory construction)."',
-            "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999, Pages 31-56, ISSN 0304-422X, https://doi.org/10.1016/S0304-422X(99)00017-0.",
+            "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "11",
             "Memory retrieval is memory construction.",
             "13",
@@ -113,7 +115,11 @@ function translator(id) {
     In short, streaming platforms promise the potential of ... the perpetually ‘becoming-individual’”`,
             "Prey, R. (2017). Nothing personal: algorithmic individuation on music streaming platforms. Media, Culture & Society, 40(7), 1086–1100.",
             "20",
-            "This is not a radical rejection of the unitary, autonomous self on the part of Spotify."
+            "This is not a radical rejection of the unitary, autonomous self on the part of Spotify.",
+            "13",
+            "I am a becoming-individual.",
+            "22",
+            "I will always be a suburban lover of smooth jazz."
         );
     }
     
@@ -222,9 +228,9 @@ function translator(id) {
             "“Nothing more infallibly classifies, than tastes in music”",
             "Pierre Bourdieu, Distinction (1984:18), in Prey, R. (2017)",
             "23",
-            "This classification is ongoing",
+            "How do you want to be classified?",
             "11",
-            ""
+            "Classification is a continual process."
         );
     }
     
@@ -233,7 +239,7 @@ function translator(id) {
             "I want to have good music taste. I want to be discerning, yet eclectic. I want to be enthusiastic, intelligent, sometimes ironic. I want to be known to have good music taste.",
             "",
             "7",
-            "Through this desire, I construct myself"
+            "Working from this desire, I construct myself."
         );
     }
     
@@ -253,7 +259,7 @@ function translator(id) {
             "“Capitalism has no land left to cultivate but the self. Everything is being cannibalized -- not just goods and labor, but personality and relationships and attention.”",
             "Jia Tolentino, Trick Mirror",
             "7",
-            "Our selves are increasingly exploited -- but we also work to maintain and construct them"
+            "Our selves are increasingly exploited -- but we <i>also</i> work to maintain and construct them"
         );
     }
     
@@ -262,7 +268,7 @@ function translator(id) {
             "“The next step is complete identification with the online marketplace, physical and spiritual inseparability from the internet.”",
             "Jia Tolentino, Trick Mirror",
             "18",
-            "Is there danger in complete identification with Music?"
+            "Is there danger in complete identification with music?"
         );
     }
     
