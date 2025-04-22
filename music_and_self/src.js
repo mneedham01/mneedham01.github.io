@@ -300,16 +300,16 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
     button1_div.setAttribute("class", "button");
     button1_div.onclick = function() {translator(button1_link);}; 
     button1_div.innerHTML += button1_title;
-    button1_div.innerHTML += "<br><br>"; 
     document.body.appendChild(button1_div);
+    document.body.innerHTML += "<br><br>"; 
 
     if (button2_link) {
         var button2_div = document.createElement("button");
         button2_div.setAttribute("class", "button");
         button2_div.onclick = function() {translator(button2_link);}; 
         button2_div.innerHTML += button2_title;
-        button2_div.innerHTML += "<br><br>"; 
         document.body.appendChild(button2_div);
+        body.innerHTML += "<br><br>"; 
     }
 
     if (button3_link) {
@@ -317,8 +317,8 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         button3_div.setAttribute("class", "button");
         button3_div.onclick = function() {translator(button3_link);}; 
         button3_div.innerHTML += button3_title;
-        button3_div.innerHTML += "<br><br>"; 
         document.body.appendChild(button3_div);
+        document.body.innerHTML += "<br><br>"; 
     }
 
 }

@@ -17,6 +17,8 @@ body{
 
 .doily1{
     width: 100vw;
+    position: absolute; 
+    left: 0vw;
     z-index: 0;
 }
 
