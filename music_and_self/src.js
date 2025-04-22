@@ -312,24 +312,33 @@ function translator(id) {
 var counter = 1; 
 
 function createObject(quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
+    // create a new div within column that 
+    var column = document.getElementById("column");
+    // get side 
+    var wrapper = document.createElement("div");
+    if (counter % 2 == 0) {
+        wrapper.setAttribute("class", "left-wrapper");
+    } else {
+        wrapper.setAttribute("class", "right-wrapper");
+    }
     var quote_div = document.createElement("div");
     quote_div.setAttribute("class", "quote");
-    quote_div.innerHTML = `<br><br>${quote}<br>`;
-    document.body.appendChild(quote_div);
+    quote_div.innerHTML = `${quote}`;
+    wrapper.appendChild(quote_div);
 
     var citation_div = document.createElement("div");
     citation_div.setAttribute("class", "citation");
     citation_div.innerHTML = `${citation}<br><br>`;
-    document.body.appendChild(citation_div);
+    wrapper.appendChild(citation_div);
 
     if (button1_link && button1_title) {
         var button1_div = document.createElement("button");
         button1_div.setAttribute("class", "button");
         button1_div.onclick = function () { translator(button1_link); };
         button1_div.innerHTML = button1_title;
-        document.body.appendChild(button1_div);
-        document.body.appendChild(document.createElement("br"));
-        document.body.appendChild(document.createElement("br"));
+        wrapper.appendChild(button1_div);
+        wrapper.appendChild(document.createElement("br"));
+        wrapper.appendChild(document.createElement("br"));
     }
 
     if (button2_link && button2_title) {
@@ -337,9 +346,9 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         button2_div.setAttribute("class", "button");
         button2_div.onclick = function () { translator(button2_link); };
         button2_div.innerHTML = button2_title;
-        document.body.appendChild(button2_div);
-        document.body.appendChild(document.createElement("br"));
-        document.body.appendChild(document.createElement("br"));
+        wrapper.appendChild(button2_div);
+        wrapper.appendChild(document.createElement("br"));
+        wrapper.appendChild(document.createElement("br"));
     }
 
     if (button3_link && button3_title) {
@@ -347,8 +356,12 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         button3_div.setAttribute("class", "button");
         button3_div.onclick = function () { translator(button3_link); };
         button3_div.innerHTML = button3_title;
-        document.body.appendChild(button3_div);
-        document.body.appendChild(document.createElement("br"));
-        document.body.appendChild(document.createElement("br"));
+        wrapper.appendChild(button3_div);
+        wrapper.appendChild(document.createElement("br"));
+        wrapper.appendChild(document.createElement("br"));
     }
+
+    column.appendChild(wrapper);
+    counter += 1; 
 }
+
