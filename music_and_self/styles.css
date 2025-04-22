@@ -1,3 +1,14 @@
+.audio {
+    height: 20px;
+    width: 200px;
+    box-shadow: 0 0 20px 0 #000a;
+    font-family: arial;
+    font-size: 0.75em;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 6px auto;
+  }
+
 a{
     font-family: "Apple Chancery", "cursive";
     font-size: 20px;
@@ -23,6 +34,18 @@ button{
     background-position: cover;
     opacity: 65%;
 }
+
+button :first {
+    border: none; 
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 10px;
+    background-image: url('start/lace_white.jpg');
+    background-position: cover;
+    opacity: 65%;
+}
+
 
 .citation{
     margin: 0px;

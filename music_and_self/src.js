@@ -401,7 +401,9 @@ function createRandomlyPlacedDiv() {
     var new_id = "div_" + new_id_num;
     div.setAttribute("id", new_id);
     if (div_counter == 0) {
-        div.style.top = "15vh";
+        div.style.top = "25vh";
+        // set the button back to normal font size 
+        
     } else {
         var prev_id = "div_" + div_counter;
         var prev_div = document.getElementById(prev_id);
