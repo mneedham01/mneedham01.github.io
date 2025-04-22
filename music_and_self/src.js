@@ -302,10 +302,14 @@ function translator(id) {
     }
     
     if (id == "The End") {
+        var div = createRandomlyPlacedDiv();
+        div.style.width = "100vw";
+        div.style.left = "0vw";
         var a = document.createElement('a');
         a.setAttribute('href', 'start/start.html');
         a.innerHTML = "Return to Start";
-        document.body.appendChild(a);
+        document.body.appendChild(div);
+        div.appendChild(a);
     }
 }
 
@@ -357,8 +361,6 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
             }, 1500)
         }
     });
-
-    counter += 1; 
 }
 
 function typeWriter(text, element, delay, callback) {
