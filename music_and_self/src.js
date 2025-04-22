@@ -100,7 +100,7 @@ function translator(id) {
     
     if (id === "10") { 
         createObject(
-            "“Listening to music with headphones provides both insulation from the world and a portal to intimacy with an incredible number of people and places.”",
+            "Listening to music with headphones provides both insulation from the world and a portal to intimacy with an incredible number of people and places.",
             "",
             "18",
             "Both an escape from and an escape into."
@@ -302,6 +302,7 @@ function translator(id) {
     }
     
     if (id == "The End") {
+        disableButtons();
         var div = createRandomlyPlacedDiv();
         div.style.width = "100vw";
         div.style.left = "0vw";
@@ -320,16 +321,21 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
     var wrapper = createRandomlyPlacedDiv();
     column.appendChild(wrapper);
 
+    // first, disable all other buttons 
+    disableButtons();
+
     var quote_div = document.createElement("div");
     quote_div.setAttribute("class", "quote");
     wrapper.appendChild(quote_div);
 
     typeWriter(quote, quote_div, 30, function () {
         // This happens AFTER the quote is fully typed
-        var citation_div = document.createElement("P");
-        citation_div.setAttribute("class", "citation");
-        citation_div.innerHTML = `${citation}`;
-        wrapper.appendChild(citation_div);
+        setTimeout(function() {
+            var citation_div = document.createElement("P");
+            citation_div.setAttribute("class", "citation");
+            citation_div.innerHTML = `${citation}`;
+            wrapper.appendChild(citation_div);
+        }, 500)
 
         if (button1_link && button1_title) {
             setTimeout(function() {
@@ -338,7 +344,7 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
                 button1_div.onclick = function () { translator(button1_link); };
                 button1_div.innerHTML = button1_title;
                 wrapper.appendChild(button1_div);
-            }, 500);
+            }, 1000);
         }
 
         if (button2_link && button2_title) {
@@ -348,7 +354,7 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
                 button2_div.onclick = function () { translator(button2_link); };
                 button2_div.innerHTML = button2_title;
                 wrapper.appendChild(button2_div);
-            }, 1000)
+            }, 1700)
         }
 
         if (button3_link && button3_title) {
@@ -358,9 +364,17 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
                 button3_div.onclick = function () { translator(button3_link); };
                 button3_div.innerHTML = button3_title;
                 wrapper.appendChild(button3_div);
-            }, 1500)
+            }, 2400)
         }
     });
+}
+
+function disableButtons() {
+    var buttons = document.getElementsByTagName("button");
+    // loop through the wrappers
+    for(var i = 0; i < buttons.length; i++){
+        buttons[i].setAttribute("pointer-events", "none");
+    }
 }
 
 function typeWriter(text, element, delay, callback) {
@@ -387,7 +401,7 @@ function createRandomlyPlacedDiv() {
     var new_id = "div_" + new_id_num;
     div.setAttribute("id", new_id);
     if (div_counter == 0) {
-        div.style.top = "10vh";
+        div.style.top = "15vh";
     } else {
         var prev_id = "div_" + div_counter;
         var prev_div = document.getElementById(prev_id);
