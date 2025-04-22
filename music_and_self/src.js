@@ -83,7 +83,7 @@ function translator(id) {
             "11",
             "Memory retrieval is memory construction.",
             "13",
-            "My own composting.", 
+            "How do we compost?", 
             "15",
             "How does music act as a repository for our memory?"
         );
@@ -144,7 +144,7 @@ function translator(id) {
     if (id === "14") {
         createObject(
             "“Music can be used as a device for the reflexive process of remembering/constructing who one is, a technology for spinning the apparently 'continuous' tale of who one ‘is’.”",
-            "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999, 31–56",
+            "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "8",
             "How does music help us spin our story?",
             "22",
@@ -173,7 +173,7 @@ function translator(id) {
     if (id === "17") {
         createObject(
             "We use music to rev up and to calm down. Music represents “where” we want to go, “emotionally, physically, and so on.”",
-            "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999",
+            "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "16",
             "Where do I want to go?", 
             "18", 
@@ -193,7 +193,7 @@ function translator(id) {
     if (id === "19") {
         createObject(
             "“Music thus provides a virtual reality within which respondents are able to express themselves in a (symbolically) violent manner, for example by choosing 'aggressive' or 'anti-establishment' music, or by playing music at full volume.”",
-            "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999",
+            "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999.",
             "5",
             "Music offers an anchor to an underlying life-force.", 
             "5",
@@ -308,6 +308,8 @@ function translator(id) {
         document.body.appendChild(a);
     }
 }
+
+var counter = 1; 
 
 function createObject(quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
     var quote_div = document.createElement("div");
