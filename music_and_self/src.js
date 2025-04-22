@@ -314,49 +314,65 @@ var counter = 1;
 function createObject(quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
    // create the new div 
     var wrapper = createRandomlyPlacedDiv();
+    column.appendChild(wrapper);
 
     var quote_div = document.createElement("div");
     quote_div.setAttribute("class", "quote");
-    quote_div.innerHTML = `${quote}`;
     wrapper.appendChild(quote_div);
 
-    var citation_div = document.createElement("div");
-    citation_div.setAttribute("class", "citation");
-    citation_div.innerHTML = `${citation}<br><br>`;
-    wrapper.appendChild(citation_div);
+    typeWriter(quote, quote_div, 30, function () {
+        // This happens AFTER the quote is fully typed
+        var citation_div = document.createElement("P");
+        citation_div.setAttribute("class", "citation");
+        citation_div.innerHTML = `${citation}`;
+        wrapper.appendChild(citation_div);
 
-    if (button1_link && button1_title) {
-        var button1_div = document.createElement("button");
-        button1_div.setAttribute("class", "button");
-        button1_div.onclick = function () { translator(button1_link); };
-        button1_div.innerHTML = button1_title;
-        wrapper.appendChild(button1_div);
-        wrapper.appendChild(document.createElement("br"));
-        wrapper.appendChild(document.createElement("br"));
-    }
+        if (button1_link && button1_title) {
+            setTimeout(function() {
+                var button1_div = document.createElement("button");
+                button1_div.setAttribute("class", "button");
+                button1_div.onclick = function () { translator(button1_link); };
+                button1_div.innerHTML = button1_title;
+                wrapper.appendChild(button1_div);
+            }, 500);
+        }
 
-    if (button2_link && button2_title) {
-        var button2_div = document.createElement("button");
-        button2_div.setAttribute("class", "button");
-        button2_div.onclick = function () { translator(button2_link); };
-        button2_div.innerHTML = button2_title;
-        wrapper.appendChild(button2_div);
-        wrapper.appendChild(document.createElement("br"));
-        wrapper.appendChild(document.createElement("br"));
-    }
+        if (button2_link && button2_title) {
+            setTimeout(function() {
+                var button2_div = document.createElement("button");
+                button2_div.setAttribute("class", "button");
+                button2_div.onclick = function () { translator(button2_link); };
+                button2_div.innerHTML = button2_title;
+                wrapper.appendChild(button2_div);
+            }, 1000)
+        }
 
-    if (button3_link && button3_title) {
-        var button3_div = document.createElement("button");
-        button3_div.setAttribute("class", "button");
-        button3_div.onclick = function () { translator(button3_link); };
-        button3_div.innerHTML = button3_title;
-        wrapper.appendChild(button3_div);
-        wrapper.appendChild(document.createElement("br"));
-        wrapper.appendChild(document.createElement("br"));
-    }
+        if (button3_link && button3_title) {
+            setTimeout(function() {
+                var button3_div = document.createElement("button");
+                button3_div.setAttribute("class", "button");
+                button3_div.onclick = function () { translator(button3_link); };
+                button3_div.innerHTML = button3_title;
+                wrapper.appendChild(button3_div);
+            }, 1500)
+        }
+    });
 
-    column.appendChild(wrapper);
     counter += 1; 
+}
+
+function typeWriter(text, element, delay, callback) {
+    let i = 0;
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, delay);
+        } else {
+            callback(); 
+        }
+    }
+    type();
 }
 
 var div_counter = 0; 
