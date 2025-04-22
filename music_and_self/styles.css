@@ -1,20 +1,28 @@
-.header{
-    height: 10vh;
-}
 body{
     position: relative; 
     text-align: center;
+    background-image: url("start/doily_zoomed.jpg");
+    background-repeat: repeat;
+    background-size: 20vh;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
 }
-.frame{
-    width: 150vh;
-    height: 2000vh;
+button{
+    border: none; 
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 15px;
+    padding: 2px 18px;
+    border-radius: 10px;
+    border: 2px solid yellow;
 }
-
 .citation{
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
 }
 
 .frame-within{
-    width: 150vh;
+    width: 100%;
+    height: 400vh;
+    margin: 0 auto;
+    border: none;
 }
