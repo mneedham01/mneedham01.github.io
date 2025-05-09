@@ -422,9 +422,9 @@ function randomLeft() {
 }
 
 window.addEventListener("load", function () {
-    // setTimeout(function() {
-    //     translator('1');
-    // }, 1000)
+    setTimeout(function() {
+        translator('1');
+    }, 1000)
 });
 
 function turn() {
@@ -439,9 +439,9 @@ function turnback() {
 
 function turn_pink() {
     var ret = document.getElementById("return");
-    ret.style.color = "blue";
+    ret.style.color = "pink";
 }
 function turn_black() {
     var ret = document.getElementById("return");
-    ret.style.color = "white";
+    ret.style.color = "black";
 }

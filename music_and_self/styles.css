@@ -46,21 +46,26 @@ button{
 }
 
 .title-img{
-    width: 80%;
-    height: 7%;
     z-index: -1;
+    width: 30%;
+    height: 4%;
+    position: absolute;
+    top: 0%;
+    left: 35%;
 }
 
 .return{
-    width: fit-content;
-    display: inline-block;
+    width: 100%;
+    position: absolute;
+    font-family: "Apple Chancery", "cursive";
+    top: 18vh;
+    z-index: 0;
     color: black;
     /* background-color: gray; */
     font-size: 20px;
     opacity: 90%;
-    padding: 2px 5px;
-    /* background-image: url('start/lace_white.jpg');
-    background-position: cover; */
+    /* background-image: url('start/lace_white.jpg'); */
+    /* background-position: cover; */
 }
 
 .citation{
