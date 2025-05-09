@@ -22,11 +22,13 @@ body{
 
 .background {
     position: absolute;
-    width: 100vw;
+    left: -5vw;
+    width: 105vw;
     height: 800vh;
     z-index: -4;
     background: linear-gradient(to bottom, #ffffff, #000000);
     opacity: 60%;
+    margin: 0px;
 }
 
 .title {
