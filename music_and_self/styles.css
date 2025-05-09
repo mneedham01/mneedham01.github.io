@@ -3,15 +3,29 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.audio{
+    visibility: hidden;
+}
+
 body{
     position: relative; 
     text-align: center;
     background-image: url("start/doily_zoomed.jpg");
     background-repeat: repeat;
     background-size: 20vh;
+    z-index: -2;
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
-    height: 100%;
+    height: auto;
+}
+
+.background {
+    position: absolute;
+    width: 100vw;
+    height: 800vh;
+    z-index: -4;
+    background: linear-gradient(to bottom, #ffffff, #000000);
+    opacity: 60%;
 }
 
 .title {

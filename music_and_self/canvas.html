@@ -6,10 +6,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <script src="src.js"></script>
 </head>
-
 <body id = "body">
-    <!-- Title -->
-    <img src = "./start/title-doily-with-words.png" class="title-img"></img>
+    <div class = "background" id = "background"></div>
+    <!-- Title -->     
+    <button  onclick = "play_audio()">
+        <img src = "./start/title-doily-with-words.png" class="title-img"></img>
+    </button>    
+    
 
     <!-- Return back to Start Page -->
     <a href = "./start/start.html">
@@ -18,9 +21,7 @@
     <br><br>
 
     <!-- Audio -->
-    <!-- <button onclick = "translator('1')"> -->
-        <!-- <audio controls class = "audio"><source src="start/soundtrack.mp3" type="audio/mp3"></audio> -->
-    <!-- </button> -->
+    <audio controls loop id = "audio" class = "audio"><source src="soundtrack-for-music-and-self.mp3" type="audio/mp3"></audio>
 
     <!-- Placement for the Quotes  -->
     <div class = "container">

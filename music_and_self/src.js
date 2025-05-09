@@ -1,21 +1,28 @@
 // these functions are for the return button
 function turn_pink() {
     // these functions are for the return button
-var ret = document.getElementById("return");
-    ret.style.color = "pink";
+    var ret = document.getElementById("return");
+    ret.style.color = "blue";
 }
-function turn_black() {
-    // these functions are for the return button
-var ret = document.getElementById("return");
+function turn_black() { 
+    var ret = document.getElementById("return");
     ret.style.color = "black";
 }
 
 // this calls the first quote on load
 window.addEventListener("load", function () {
-    setTimeout(function() {
-        translator('1');
-    }, 1000)
+    // document.getElementById("").play();
+    // document.getElementById("trigger").click();
+    // setTimeout(function() {
+    //     translator('29');
+    // }, 1000)
 });
+
+function play_audio(){
+    console.log("hello");
+    document.getElementById("audio").play();
+    translator('1');
+}
 
 // this function takes in the id and calls the createObject function, giving it all the data 
 function translator(id) {
@@ -142,7 +149,7 @@ function translator(id) {
     if (id === "11") {
         createObject(
             "11",
-            `For a streaming service, there is no <i>real</i> you.
+            `For a streaming service, there is no real you.
     "I am an urban travel enthusiast with a penchant for the Delta blues … until I am not. 
     You are a suburban lover of smooth jazz … until you are not. 
     In short, streaming platforms promise the potential of ... the perpetually ‘becoming-individual’”`,
@@ -159,7 +166,7 @@ function translator(id) {
     if (id === "12") {
         createObject(
             "12",
-            "'Aural perception 'preserves comparably more traits of long bygone, pre-individualistic collectivities.'”",
+            'Aural perception "preserves comparably more traits of long bygone, pre-individualistic collectivities."',
             "Eisler and Adorno, Composing for the Films (1947), quoted in Claudia Gorbman, “Why Music?” Unheard Melodies (40)",
             "10",
             "Do contemporary music listening practices further individualize us?"
@@ -354,14 +361,15 @@ function translator(id) {
     
     if (id == "The End") {
         disableButtons();
-        var div = createRandomlyPlacedDiv();
-        div.style.width = "100vw";
-        div.style.left = "0vw";
-        var a = document.createElement('a');
-        a.setAttribute('href', 'start/start.html');
-        a.innerHTML = "Return to Start";
-        document.body.appendChild(div);
-        div.appendChild(a);
+        window.location.href = "./end/end.html";
+        // var div = createRandomlyPlacedDiv();
+        // div.style.width = "100vw";
+        // div.style.left = "0vw";
+        // var a = document.createElement('a');
+        // a.setAttribute('href', 'start/start.html');
+        // a.innerHTML = "Return to Start";
+        // document.body.appendChild(div);
+        // div.appendChild(a);
     }
 }
 
@@ -382,7 +390,7 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
     quote_div.setAttribute("class", "quote");
     wrapper.appendChild(quote_div);
 
-    typeWriter(quote, quote_div, 0, function () {
+    typeWriter(quote, quote_div, 30, function () {
         // This happens AFTER the quote is fully typed
         setTimeout(function() {
             var citation_div = document.createElement("P");
@@ -608,11 +616,16 @@ function createRandomlyPlacedDiv() {
         const absolutePixels = rect.top + rect.height + window.scrollY;
         div.style.top = absolutePixels + "px";
         //increase the height of the body
-        var body = document.getElementById("body");
-        console.log(absolutePixels);
-        var new_height = absolutePixels + 700;
-        console.log(new_height);
-        body.style.height = new_height + "px";
+        // var body = document.getElementById("body");
+        // console.log(absolutePixels);
+        // var new_height = absolutePixels + 700;
+        // console.log(new_height);
+        // body.style.height = new_height + "px";
+        // // increase the height of the background 
+        // var background = document.getElementById("background");
+        // var background_height = absolutePixels + 1000;
+        // background.style.height = background_height + "px";
+
     }
     div_counter += 1;
     return div; 
