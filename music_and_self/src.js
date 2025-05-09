@@ -17,7 +17,9 @@ window.addEventListener("load", function () {
 // this function takes in the id and calls the createObject function, giving it all the data 
 function translator(id) {
     if (id === "1") {
-        createObject('"You have to start romanticizing your life," a voiceover on TikTok commands.“You have to start thinking about yourself as the main character.”',
+        createObject(
+            "1",
+            '"You have to start romanticizing your life," a voiceover on TikTok commands.“You have to start thinking about yourself as the main character.”',
             '“Main Character Energy: Interiority in a World of Screens,” Coco Klockner, REAL LIFE',
             "2", 
             'Why are we constantly told to see ourselves as the "main character"?',
@@ -29,7 +31,9 @@ function translator(id) {
     }
 
     if (id === "2") {
-        createObject('"The self, configured as a unitary, autonomous individual in possession of an essential subjectivity, is one of the linchpins of modern social organization.”',
+        createObject(
+            "2",
+            '"The self, configured as a unitary, autonomous individual in possession of an essential subjectivity, is one of the linchpins of modern social organization.”',
             'Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.',
             "7", 
             'How is this self constructed?',
@@ -40,6 +44,7 @@ function translator(id) {
 
     if (id === "3") {
         createObject(
+            "3",
             "“We can leverage all of our knowledge about who our users are and try to give them the perfect soundtrack for that moment.”",
             "Spotify CEO Daniel Ek",
             "5",
@@ -53,6 +58,7 @@ function translator(id) {
     
     if (id === "4") {
         createObject(
+            "4",
             "“We live entirely, especially if we are writers, by the imposition of a narrative line upon disparate images, by the ‘ideas’ with which we have learned to freeze the shifting phantasmagoria which is our actual experience.”",
             "The White Album, Joan Didion",
             "14",
@@ -64,6 +70,7 @@ function translator(id) {
     
     if (id === "5") {
         createObject(
+            "5",
             "“The fact that [characters on screen] are living and nonliving at the same time is what constitutes their ghostly character, and music was introduced not to supply them with the life they lacked … but to exorcise fear or help the spectator absorb the shock.”",
             "Eisler and Adorno, <i>Composing for the Films</i>, New York: Oxford University Press, 1947, p. 75, quoted in Claudia Gorbman, “Why Music? From Silents to Sound,” <i>Unheard Melodies: Narrative Film Music</i>, p. 39",
             "19",
@@ -75,6 +82,7 @@ function translator(id) {
     
     if (id === "6") {
         createObject(
+            "6",
             "“Nevertheless, we must bring about a music which is like furniture – a music, that is, which will be part of the noises of the environment, will take them into consideration. I think of it as melodious, softening the noises of the knives and forks, not dominating them, not imposing itself.”",
             "Erik Satie, as quoted in John Cage, 1958 <i>Art News Annual</i>",
             "24",
@@ -84,6 +92,7 @@ function translator(id) {
     
     if (id === "7") {
         createObject(
+            "7",
             "“Through myriad acts of everyday consumption – from the songs we listen to, to the products we buy – we produce our identity and modulate ourselves as individuals.”",
             "Prey, R. (2017). Nothing personal: algorithmic individuation on music streaming platforms. <i>Media, Culture & Society</i>, 40(7), 1086–1100. https://doi.org/10.1177/0163443717745147",
             "11",
@@ -95,6 +104,7 @@ function translator(id) {
     
     if (id === "8") {
         createObject(
+            "8",
             'In the "composting of past experiences," "music again comes to the fore, as part of the retinue of devices for memory retrieval (which is, of course, simultaneously memory construction)."',
             "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "11",
@@ -108,6 +118,7 @@ function translator(id) {
     
     if (id === "9") {
         createObject(
+            "9",
             "I worry about Spotify’s “On Repeat” algorithm cannibalizing itself: by listening to the songs, I push them onto the playlist, an infinite echo in digital streaming.",
             "",
             "8",
@@ -117,6 +128,7 @@ function translator(id) {
     
     if (id === "10") { 
         createObject(
+            "10",
             "Listening to music with headphones provides both insulation from the world and a portal to intimacy with an incredible number of people and places.",
             "",
             "18",
@@ -126,6 +138,7 @@ function translator(id) {
 
     if (id === "11") {
         createObject(
+            "11",
             `For a streaming service, there is no <i>real</i> you.
     "I am an urban travel enthusiast with a penchant for the Delta blues … until I am not. 
     You are a suburban lover of smooth jazz … until you are not. 
@@ -142,6 +155,7 @@ function translator(id) {
     
     if (id === "12") {
         createObject(
+            "12",
             "'Aural perception 'preserves comparably more traits of long bygone, pre-individualistic collectivities.'”",
             "Eisler and Adorno, Composing for the Films (1947), quoted in Claudia Gorbman, “Why Music?” Unheard Melodies (40)",
             "10",
@@ -151,6 +165,7 @@ function translator(id) {
     
     if (id === "13") {
         createObject(
+            "13",
             "The remix of Adele’s “Hometown Glory” yanks me to four years ago, on a bike, fingers cold and soaked from the rain, looking into the harbor in Alaska, knowing I would never be that version of myself again.",
             "",
             "7",
@@ -160,6 +175,7 @@ function translator(id) {
     
     if (id === "14") {
         createObject(
+            "14",
             "“Music can be used as a device for the reflexive process of remembering/constructing who one is, a technology for spinning the apparently 'continuous' tale of who one ‘is’.”",
             "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "8",
@@ -171,6 +187,7 @@ function translator(id) {
     
     if (id === "15") {
         createObject(
+            "15",
             "Just as so much of my life is documented now through iPhone photos, FitBit data, and an endless cache of Google Searches, my musical life is archived through playlists titled “nov 2019,” “springtime,” “favs right now.”",
             "",
             "4",
@@ -180,6 +197,7 @@ function translator(id) {
     
     if (id === "16") {
         createObject(
+            "16",
             "To prepare for a gathering, I play Shygirl or Charli XCX or Yaeji or Timbaland as I put on makeup. I often feel like I’m playing myself as an instrument – manipulating auditory circumstances, reliant on their cultural connotations, in order to produce a new emotional state.",
             "",
             "18",
@@ -189,6 +207,7 @@ function translator(id) {
     
     if (id === "17") {
         createObject(
+            "17",
             "We use music to rev up and to calm down. Music represents “where” we want to go, “emotionally, physically, and so on.”",
             "Tia DeNora, Music as a technology of the self, Poetics, Volume 27, Issue 1, 1999.",
             "16",
@@ -200,6 +219,7 @@ function translator(id) {
     
     if (id === "18") {
         createObject(
+            "18",
             "Our metaphors representing our relationship with music betray the messy boundaries we hold with the medium: we escape into music, music becomes a part of us, we see ourselves in songs, the music “takes us back.” Do I enter music or does it enter me?",
             "",
             "27",
@@ -209,6 +229,7 @@ function translator(id) {
     
     if (id === "19") {
         createObject(
+            "19",
             "“Music thus provides a virtual reality within which respondents are able to express themselves in a (symbolically) violent manner, for example by choosing 'aggressive' or 'anti-establishment' music, or by playing music at full volume.”",
             "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999.",
             "5",
@@ -222,6 +243,7 @@ function translator(id) {
     
     if (id === "20") {
         createObject(
+            "20",
             "“It’s becoming quite apparent to us that the world of playing the perfect music to people and the world of playing perfect advertising to them are strikingly similar.”",
             "Eric Bieschke, quoted in Prey, R. (2017). Nothing personal...",
             "22",
@@ -231,6 +253,7 @@ function translator(id) {
     
     if (id === "21") {
         createObject(
+            "21",
             "Streaming services '[tether] the potential for alternative futures to our previous actions as users based on consumption and research for consumption.’",
             "Cheney-Lippold, 2011, in Prey, R. (2017)",
             "9",
@@ -242,6 +265,7 @@ function translator(id) {
     
     if (id === "22") {
         createObject(
+            "22",
             "“Nothing more infallibly classifies, than tastes in music”",
             "Pierre Bourdieu, Distinction (1984:18), in Prey, R. (2017)",
             "23",
@@ -253,6 +277,7 @@ function translator(id) {
     
     if (id === "23") {
         createObject(
+            "23",
             "I want to have good music taste. I want to be discerning, yet eclectic. I want to be enthusiastic, intelligent, sometimes ironic. I want to be known to have good music taste.",
             "",
             "7",
@@ -262,6 +287,7 @@ function translator(id) {
     
     if (id === "24") {
         createObject(
+            "24",
             "“This is a vision of music not as art or even as commodity, but as something like audio furniture. Mood is the object; sound is beside the point.”",
             "Mitch Therieau, “Dream of Antonoffication,” The Drift",
             "26",
@@ -273,6 +299,7 @@ function translator(id) {
     
     if (id === "25") {
         createObject(
+            "25",
             "“Capitalism has no land left to cultivate but the self. Everything is being cannibalized -- not just goods and labor, but personality and relationships and attention.”",
             "Jia Tolentino, Trick Mirror",
             "7",
@@ -282,6 +309,7 @@ function translator(id) {
     
     if (id === "26") {
         createObject(
+            "26",
             "“The next step is complete identification with the online cketplace, physical and spiritual inseparability from the internet.”",
             "Jia Tolentino, Trick Mirror",
             "18",
@@ -291,6 +319,7 @@ function translator(id) {
     
     if (id === "27") {
         createObject(
+            "27",
             "“And at the center of the swirl of sound that often doesn’t register as music so much as undifferentiated yearning, there is an empty space for you, the main character.”",
             "Mitch Therieau, “Dream of Antonoffication,” The Drift",
             "28",
@@ -302,6 +331,7 @@ function translator(id) {
     
     if (id === "28") {
         createObject(
+            "28",
             "“Everyone deserves to be the main character of their own life. Everyone is the main character of their own life.”",
             "“Main Character Energy,” Magdalene J. Taylor, Many Such Cases Substack",
             "The End",
@@ -311,6 +341,7 @@ function translator(id) {
     
     if (id === "29") {
         createObject(
+            "29",
             "The main character persona bestows a sense of protection. The main character can be hurt, damaged, even be momentarily embarrassed, but redemption always comes... When we live as the main character, we’ve forfeited our vulnerability for the sake of the story.",
             "“Main Character Energy,” Magdalene J. Taylor, Many Such Cases Substack",
             "The End",
@@ -333,7 +364,7 @@ function translator(id) {
 
 var counter = 1; 
 
-function createObject(quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
+function createObject(id, quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
    // create the new div 
     var wrapper = createRandomlyPlacedDiv();
     column.appendChild(wrapper);
@@ -345,7 +376,7 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
     quote_div.setAttribute("class", "quote");
     wrapper.appendChild(quote_div);
 
-    typeWriter(quote, quote_div, 30, function () {
+    typeWriter(quote, quote_div, 0, function () {
         // This happens AFTER the quote is fully typed
         setTimeout(function() {
             var citation_div = document.createElement("P");
@@ -357,8 +388,10 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         if (button1_link && button1_title) {
             setTimeout(function() {
                 var button1_div = document.createElement("button");
+                var new_id = id + "_" + button1_link;
+                button1_div.setAttribute("id", new_id);
                 button1_div.setAttribute("class", "button");
-                button1_div.onclick = function () { translator(button1_link); };
+                button1_div.onclick = function () { button_on_click(new_id, button1_link) };
                 button1_div.innerHTML = button1_title;
                 wrapper.appendChild(button1_div);
             }, 1000);
@@ -367,8 +400,10 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         if (button2_link && button2_title) {
             setTimeout(function() {
                 var button2_div = document.createElement("button");
+                var new_id = id + "_" + button2_link;
+                button2_div.setAttribute("id", new_id);
                 button2_div.setAttribute("class", "button");
-                button2_div.onclick = function () { translator(button2_link); };
+                button2_div.onclick = function () {button_on_click(new_id, button2_link)};
                 button2_div.innerHTML = button2_title;
                 wrapper.appendChild(button2_div);
             }, 1700)
@@ -377,13 +412,27 @@ function createObject(quote, citation, button1_link = "", button1_title = "", bu
         if (button3_link && button3_title) {
             setTimeout(function() {
                 var button3_div = document.createElement("button");
+                var new_id = id + "_" + button3_link;
+                button3_div.setAttribute("id", new_id);
                 button3_div.setAttribute("class", "button");
-                button3_div.onclick = function () { translator(button3_link); };
+                button3_div.onclick = function () {button_on_click(new_id, button3_link)};
                 button3_div.innerHTML = button3_title;
                 wrapper.appendChild(button3_div);
             }, 2400)
         }
     });
+}
+
+// create a directory of question id_answer ids 
+var clicked_buttons = [];
+
+// this function takes in the current id and the link to go to 
+function button_on_click(id, link) {
+    // first, turns the button darker 
+    var button = document.getElementById(id);
+    button.style.filter = "brightness(60%)";
+    // then, redirect to the appropriate translator 
+    translator(link)
 }
 
 function disableButtons() {
