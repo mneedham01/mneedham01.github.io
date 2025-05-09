@@ -1,3 +1,20 @@
+// these functions are for the return button
+const ret = document.getElementById("return");
+function turn_pink() {
+    ret.style.color = "pink";
+}
+function turn_black() {
+    ret.style.color = "black";
+}
+
+// this calls the first quote on load
+window.addEventListener("load", function () {
+    setTimeout(function() {
+        translator('1');
+    }, 1000)
+});
+
+// this function takes in the id and calls the createObject function, giving it all the data 
 function translator(id) {
     if (id === "1") {
         createObject('"You have to start romanticizing your life," a voiceover on TikTok commands.“You have to start thinking about yourself as the main character.”',
@@ -265,7 +282,7 @@ function translator(id) {
     
     if (id === "26") {
         createObject(
-            "“The next step is complete identification with the online marketplace, physical and spiritual inseparability from the internet.”",
+            "“The next step is complete identification with the online cketplace, physical and spiritual inseparability from the internet.”",
             "Jia Tolentino, Trick Mirror",
             "18",
             "Is there danger in complete identification with music?"
@@ -419,29 +436,4 @@ function createRandomlyPlacedDiv() {
 function randomLeft() {
     var max_left = 50;
     return Math.floor(Math.random() * max_left); 
-}
-
-window.addEventListener("load", function () {
-    setTimeout(function() {
-        translator('1');
-    }, 1000)
-});
-
-function turn() {
-    var first = document.getElementById("first");
-    first.style.color = "blue";
-}
-
-function turnback() {
-    var first = document.getElementById("first");
-    first.style.color = "black";
-}
-
-function turn_pink() {
-    var ret = document.getElementById("return");
-    ret.style.color = "pink";
-}
-function turn_black() {
-    var ret = document.getElementById("return");
-    ret.style.color = "black";
 }
