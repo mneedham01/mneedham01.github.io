@@ -420,3 +420,28 @@ function randomLeft() {
     var max_left = 50;
     return Math.floor(Math.random() * max_left); 
 }
+
+window.addEventListener("load", function () {
+    // setTimeout(function() {
+    //     translator('1');
+    // }, 1000)
+});
+
+function turn() {
+    var first = document.getElementById("first");
+    first.style.color = "blue";
+}
+
+function turnback() {
+    var first = document.getElementById("first");
+    first.style.color = "black";
+}
+
+function turn_pink() {
+    var ret = document.getElementById("return");
+    ret.style.color = "blue";
+}
+function turn_black() {
+    var ret = document.getElementById("return");
+    ret.style.color = "white";
+}
