@@ -9,20 +9,33 @@ function turn_black() {
     ret.style.color = "black";
 }
 
-// this calls the first quote on load
-window.addEventListener("load", function () {
-    // document.getElementById("").play();
-    // document.getElementById("trigger").click();
-    // setTimeout(function() {
-    //     translator('29');
-    // }, 1000)
-});
-
-function play_audio(){
+function start_game(){
     console.log("hello");
     document.getElementById("audio").play();
     translator('1');
 }
+
+const num_bells = 2;
+
+function play_bell() {
+    var bell = document.getElementById("bell");
+    // choose random number 
+    const min = 1;
+    const max = num_bells;
+    var source = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log("source = " + source);
+    var path = "./bell-sounds/" + source + ".mp3";
+    console.log("path = " + path);
+    bell.src = path;
+    bell.volume = "0.15";
+    bell.play();
+}
+
+// fixes the extra button
+window.addEventListener("load", function () {
+    var title = document.getElementById("start");
+    title.style.padding = "0px";
+});
 
 // this function takes in the id and calls the createObject function, giving it all the data 
 function translator(id) {
@@ -572,6 +585,8 @@ function button_on_click(general_id, appended_id, link) {
     button.style.filter = "brightness(75%)";
     // then, add to repository of ids 
     clicked_buttons.push(general_id);
+    // then, play bell sound 
+    play_bell();
     // then, redirect to the appropriate translator 
     translator(link);
 }
