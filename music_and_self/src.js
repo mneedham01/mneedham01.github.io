@@ -363,6 +363,8 @@ function translator(id) {
 }
 
 var counter = 1; 
+// create a directory of question id_answer ids 
+var clicked_buttons = [];
 
 function createObject(id, quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
    // create the new div 
@@ -390,6 +392,10 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
                 var button1_div = document.createElement("button");
                 var new_id = id + "_" + button1_link;
                 button1_div.setAttribute("id", new_id);
+                // if the button + answer have already been clicked, set darkness to 75%
+                if (clicked_buttons.includes(new_id)) {
+                    button1_div.style.filter = "brightness(75%)";
+                }
                 button1_div.setAttribute("class", "button");
                 button1_div.onclick = function () { button_on_click(new_id, button1_link) };
                 button1_div.innerHTML = button1_title;
@@ -401,6 +407,10 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
             setTimeout(function() {
                 var button2_div = document.createElement("button");
                 var new_id = id + "_" + button2_link;
+                // if the button + answer have already been clicked, set darkness to 75%
+                if (clicked_buttons.includes(new_id)) {
+                    button2_div.style.filter = "brightness(75%)";
+                }
                 button2_div.setAttribute("id", new_id);
                 button2_div.setAttribute("class", "button");
                 button2_div.onclick = function () {button_on_click(new_id, button2_link)};
@@ -413,6 +423,10 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
             setTimeout(function() {
                 var button3_div = document.createElement("button");
                 var new_id = id + "_" + button3_link;
+                // if the button + answer have already been clicked, set darkness to 75%
+                if (clicked_buttons.includes(new_id)) {
+                    button3_div.style.filter = "brightness(90%)";
+                }
                 button3_div.setAttribute("id", new_id);
                 button3_div.setAttribute("class", "button");
                 button3_div.onclick = function () {button_on_click(new_id, button3_link)};
@@ -423,16 +437,16 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
     });
 }
 
-// create a directory of question id_answer ids 
-var clicked_buttons = [];
-
 // this function takes in the current id and the link to go to 
 function button_on_click(id, link) {
     // first, turns the button darker 
     var button = document.getElementById(id);
-    button.style.filter = "brightness(60%)";
+    button.style.filter = "brightness(75%)";
+    // then, add to repository of ids 
+    clicked_buttons.push(id);
+    console.log(clicked_buttons);
     // then, redirect to the appropriate translator 
-    translator(link)
+    translator(link);
 }
 
 function disableButtons() {
