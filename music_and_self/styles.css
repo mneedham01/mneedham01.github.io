@@ -1,3 +1,8 @@
+/* Do not display the scroll bar  */
+html::-webkit-scrollbar {
+    display: none;
+}
+
 body{
     position: relative; 
     text-align: center;
@@ -6,7 +11,7 @@ body{
     background-size: 20vh;
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 15px;
-    height: 500vh;
+    height: 100%;
 }
 
 .title {
@@ -26,7 +31,7 @@ body{
 .title-img{
     z-index: -1;
     width: 30%;
-    height: 4%;
+    height:20vh;
     position: absolute;
     top: 0%;
     left: 35%;
@@ -46,7 +51,6 @@ body{
 .container {
     display: grid;
     grid-template-columns: 0.25fr 1fr 0.25fr;
-    grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
@@ -84,4 +88,5 @@ button{
     background-image: url('start/lace_white.jpg');
     background-position: cover;
     opacity: 80%;
+
 }

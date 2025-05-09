@@ -1,9 +1,12 @@
 // these functions are for the return button
-const ret = document.getElementById("return");
 function turn_pink() {
+    // these functions are for the return button
+var ret = document.getElementById("return");
     ret.style.color = "pink";
 }
 function turn_black() {
+    // these functions are for the return button
+var ret = document.getElementById("return");
     ret.style.color = "black";
 }
 
@@ -38,7 +41,7 @@ function translator(id) {
             "7", 
             'How is this self constructed?',
             "25",
-            'Why is "the self" so characteristic of right <i>now</i>?'
+            'Why is "the self" so characteristic of right now?'
         );
     }
 
@@ -191,7 +194,7 @@ function translator(id) {
             "Just as so much of my life is documented now through iPhone photos, FitBit data, and an endless cache of Google Searches, my musical life is archived through playlists titled “nov 2019,” “springtime,” “favs right now.”",
             "",
             "4",
-            "In the Spotify l, a series of messy moments turns into a neat timeline."
+            "In the Spotify I turn a series of messy moments turns into a neat timeline."
         );
     }
     
@@ -234,7 +237,7 @@ function translator(id) {
             "Tia DeNora, Music as a technology of the self, Poetics, 27(1), 1999.",
             "5",
             "Music offers an anchor to an underlying life-force.", 
-            "5",
+            "4",
             "Music is both more real and less real than 'real life'.",
             "27",
             "Step into the virtual reality."
@@ -365,6 +368,7 @@ function translator(id) {
 var counter = 1; 
 // create a directory of question id_answer ids 
 var clicked_buttons = [];
+var seen_buttons = [];
 
 function createObject(id, quote, citation, button1_link = "", button1_title = "", button2_link = "", button2_title = "", button3_link = "", button3_title = "") {
    // create the new div 
@@ -387,49 +391,164 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
             wrapper.appendChild(citation_div);
         }, 500)
 
+        // BUTTON 1
         if (button1_link && button1_title) {
+            console.log("Button 1");
             setTimeout(function() {
                 var button1_div = document.createElement("button");
-                var new_id = id + "_" + button1_link;
-                button1_div.setAttribute("id", new_id);
+                var general_id = id + "_" + button1_link;
+                console.log("Button 1 general_id: "+ general_id);
+                var appended_id;
+
+                // add button to seen list 
+                seen_buttons.push(general_id);
+                console.log("Added to seen list");
+
                 // if the button + answer have already been clicked, set darkness to 75%
-                if (clicked_buttons.includes(new_id)) {
+                if (clicked_buttons.includes(general_id)) {
+                    // if the button has already been clicked, append to the existing id
+                    // loop through array to find how many times that button has been clicked 
+                    console.log("This button has been clicked before.");
+                    console.log("Clicked_buttons list: " + clicked_buttons);
+                    var appearances = 0; 
+                    for (var elem of clicked_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("This button has been seen " + appearances + "times");
+                    var num = appearances + 1;
+                    appended_id= general_id + "_" + num;
+                    console.log("I am renaming the id of this button to:  " + appended_id);
                     button1_div.style.filter = "brightness(75%)";
+                    console.log("I changed the brightness of this ID");
                 }
+                // if the button has already been seen, then you also need to update the id
+                if (seen_buttons.includes(general_id)) {
+                    // loop through array to find how many times that button has been seen
+                    console.log("This button has been seen before.");
+                    var appearances = 0; 
+                    for (var elem of seen_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("Seen_buttons list+ " + seen_buttons);
+                    console.log("This button has been seen " + appearances + " times");
+                    appended_id = general_id + "_" + appearances;
+                    console.log("I am renaming this button to: " + appended_id);
+                }
+                button1_div.setAttribute("id", appended_id);
                 button1_div.setAttribute("class", "button");
-                button1_div.onclick = function () { button_on_click(new_id, button1_link) };
+                button1_div.onclick = function () { button_on_click(general_id, appended_id, button1_link) };
                 button1_div.innerHTML = button1_title;
                 wrapper.appendChild(button1_div);
             }, 1000);
         }
 
         if (button2_link && button2_title) {
+            console.log("Button 2");
             setTimeout(function() {
                 var button2_div = document.createElement("button");
-                var new_id = id + "_" + button2_link;
+                var general_id = id + "_" + button2_link;
+                var appended_id;
+                console.log("Button 2 general_id: "+ general_id);
+
+                // add button to seen list 
+                seen_buttons.push(general_id);
+                console.log("Added to seen list");
+
                 // if the button + answer have already been clicked, set darkness to 75%
-                if (clicked_buttons.includes(new_id)) {
+                if (clicked_buttons.includes(general_id)) {
+                    // if the button has already been clicked, append to the existing id
+                    // loop through array to find how many times that button has been clicked 
+                    console.log("This button has been clicked before.");
+                    console.log("Clicked_buttons list: " + clicked_buttons);
+                    var appearances = 0; 
+                    for (var elem of clicked_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("This button has been seen " + appearances + "times");
+                    var num = appearances + 1;
+                    appended_id = general_id + "_" + num;
+                    console.log("I am renaming the id of this button to:  " + appended_id);
                     button2_div.style.filter = "brightness(75%)";
+                    console.log("I changed the brightness of this ID");
                 }
-                button2_div.setAttribute("id", new_id);
+                // if the button has already been seen, then you also need to update the id
+                if (seen_buttons.includes(general_id)) {
+                    // loop through array to find how many times that button has been seen
+                    console.log("This button has been seen before.");
+                    var appearances = 0; 
+                    for (var elem of seen_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("Seen_buttons list+ " + seen_buttons);
+                    console.log("This button has been seen " + appearances + " times");
+                    appended_id = general_id + "_" + appearances;
+                    console.log("I am renaming this button to: " + appended_id);
+                }
+                button2_div.setAttribute("id", appended_id);
                 button2_div.setAttribute("class", "button");
-                button2_div.onclick = function () {button_on_click(new_id, button2_link)};
+                button2_div.onclick = function () {button_on_click(general_id, appended_id, button2_link)};
                 button2_div.innerHTML = button2_title;
                 wrapper.appendChild(button2_div);
             }, 1700)
         }
 
         if (button3_link && button3_title) {
+            console.log("Button 3");
             setTimeout(function() {
                 var button3_div = document.createElement("button");
-                var new_id = id + "_" + button3_link;
+                var general_id = id + "_" + button3_link;
+                var appended_id;
+                console.log("Button 3 general_id: "+ general_id);
+
+                // add button to seen list 
+                seen_buttons.push(general_id);
+                console.log("Added this button to the seen list");
+                
                 // if the button + answer have already been clicked, set darkness to 75%
-                if (clicked_buttons.includes(new_id)) {
-                    button3_div.style.filter = "brightness(90%)";
+                if (clicked_buttons.includes(general_id)) {
+                    // if the button has already been clicked, append to the existing id
+                    // loop through array to find how many times that button has been clicked 
+                    console.log("This button has been clicked before.");
+                    console.log("Clicked_buttons list: " + clicked_buttons);
+                    var appearances = 0; 
+                    for (var elem of clicked_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("This button has been seen " + appearances + "times");
+                    var num = appearances + 1;
+                    appended_id = general_id + "_" + num;
+                    console.log("I am renaming the id of this button to:  " + appended_id);
+                    button3_div.style.filter = "brightness(75%)";
+                    console.log("I changed the brightness of this ID");
                 }
-                button3_div.setAttribute("id", new_id);
+                // if the button has already been seen, then you also need to update the id
+                if (seen_buttons.includes(general_id)) {
+                    // loop through array to find how many times that button has been seen
+                    console.log("This button has been seen before.");
+                    var appearances = 0; 
+                    for (var elem of seen_buttons) {
+                        if (elem == general_id) {
+                            appearances += 1;
+                        }
+                    }
+                    console.log("Seen_buttons list+ " + seen_buttons);
+                    console.log("This button has been seen " + appearances + " times");
+                    appended_id = general_id + "_" + appearances;
+                    console.log("I am renaming this button to: " + appended_id);
+                }
+                button3_div.setAttribute("id", appended_id);
                 button3_div.setAttribute("class", "button");
-                button3_div.onclick = function () {button_on_click(new_id, button3_link)};
+                button3_div.onclick = function () {button_on_click(general_id, appended_id, button3_link)};
                 button3_div.innerHTML = button3_title;
                 wrapper.appendChild(button3_div);
             }, 2400)
@@ -438,13 +557,13 @@ function createObject(id, quote, citation, button1_link = "", button1_title = ""
 }
 
 // this function takes in the current id and the link to go to 
-function button_on_click(id, link) {
+function button_on_click(general_id, appended_id, link) {
+    console.log("I'm in button_on_click for this id: " + appended_id + "plus this link: " + link);
     // first, turns the button darker 
-    var button = document.getElementById(id);
+    var button = document.getElementById(appended_id);
     button.style.filter = "brightness(75%)";
     // then, add to repository of ids 
-    clicked_buttons.push(id);
-    console.log(clicked_buttons);
+    clicked_buttons.push(general_id);
     // then, redirect to the appropriate translator 
     translator(link);
 }
@@ -477,20 +596,23 @@ function createRandomlyPlacedDiv() {
     var div = document.createElement("div");
     div.setAttribute("class", "random-div");
     div.style.left = randomLeft() + "vw";
-    var new_id_num = div_counter + 1; 
-    var new_id = "div_" + new_id_num;
-    div.setAttribute("id", new_id);
+    var general_id_num = div_counter + 1; 
+    var general_id = "div_" + general_id_num;
+    div.setAttribute("id", general_id);
     if (div_counter == 0) {
         div.style.top = "25vh";
-        // set the button back to normal font size 
-        
     } else {
         var prev_id = "div_" + div_counter;
         var prev_div = document.getElementById(prev_id);
         const rect = prev_div.getBoundingClientRect();
         const absolutePixels = rect.top + rect.height + window.scrollY;
-        const vh = (absolutePixels / window.innerHeight) * 100;
-        div.style.top = vh + "vh";
+        div.style.top = absolutePixels + "px";
+        //increase the height of the body
+        var body = document.getElementById("body");
+        console.log(absolutePixels);
+        var new_height = absolutePixels + 700;
+        console.log(new_height);
+        body.style.height = new_height + "px";
     }
     div_counter += 1;
     return div; 
