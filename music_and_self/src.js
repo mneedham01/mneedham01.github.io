@@ -20,13 +20,13 @@ const num_bells = 2;
 function play_bell() {
     var bell = document.getElementById("bell");
     // choose random number 
-    const min = 1;
-    const max = num_bells;
-    var source = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log("source = " + source);
-    var path = "./bell-sounds/" + source + ".mp3";
-    console.log("path = " + path);
-    bell.src = path;
+    // const min = 1;
+    // const max = num_bells;
+    // var source = Math.floor(Math.random() * (max - min + 1)) + min;
+    // console.log("source = " + source);
+    // var path = "./bell-sounds/" + source + ".mp3";
+    // console.log("path = " + path);
+    // bell.src = path;
     bell.volume = "0.15";
     bell.play();
 }
@@ -94,7 +94,7 @@ function translator(id) {
     if (id === "5") {
         createObject(
             "5",
-            "“The fact that [characters on screen] are living and nonliving at the same time is what constitutes their ghostly character, and music was introduced not to supply them with the life they lacked … but to exorcise fear or help the spectator absorb the shock.”",
+            "Eisler and Adorno on the need for music in cinema: “The fact that [characters on screen] are living and nonliving at the same time is what constitutes their ghostly character, and music was introduced not to supply them with the life they lacked … but to exorcise fear or help the spectator absorb the shock.”",
             "Eisler and Adorno, <i>Composing for the Films</i>, New York: Oxford University Press, 1947, p. 75, quoted in Claudia Gorbman, “Why Music? From Silents to Sound,” <i>Unheard Melodies: Narrative Film Music</i>, p. 39",
             "19",
             "Music can supply reality, but it can also provide a <i>virtual reality</i>",
@@ -630,6 +630,9 @@ function createRandomlyPlacedDiv() {
         const rect = prev_div.getBoundingClientRect();
         const absolutePixels = rect.top + rect.height + window.scrollY;
         div.style.top = absolutePixels + "px";
+        // if the 
+
+
         //increase the height of the body
         // var body = document.getElementById("body");
         // console.log(absolutePixels);
