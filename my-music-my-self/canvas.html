@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class = "head">
+    <meta charset="UTF-8">
+    <title>My Music, My Self</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="src.js"></script>
+</head>
+<body id = "body">
+    <div class = "background" id = "background"></div>
+    <!-- Title -->     
+    <button onclick = "start_game()" id = "start">
+        <img src = "./start/title-doily-with-words.png" class="title-img"></img>
+    </button>    
+    
+    <!-- Return back to Start Page -->
+    <!-- <a href = "./start/start.html">
+        <div id = "return" class = "return" onmouseover = "turn_pink()" onmouseout ="turn_black()">restart</div>
+    </a>
+    <br><br> -->
+
+    <!-- Audio -->
+    <audio controls loop id = "audio" class = "audio"><source src="soundtrack-for-music-and-self.mp3" type="audio/mp3"></audio>
+    <audio controls class = "audio" id = "bell"><source src="./bell-sounds/1.mp3" type="audio/mp3"></audio>
+
+    <!-- Placement for the Quotes  -->
+    <div class = "container">
+        <div class = "column" id = "column"></div>
+    </div>
+</body>

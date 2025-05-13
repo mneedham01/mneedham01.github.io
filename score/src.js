@@ -24,7 +24,7 @@ function figureAppears() {
     var max = 5;
     var id = figure_ids[Math.floor(Math.random() * (max - min + 1)) + min];
     // change the source
-    element.src = "../photos/score_pieces/figure" + id + ".png";
+    element.src = "./images/figure" + id + ".png";
     // set to visible if it was hidden 
     element.style.visibility = "visible";
     // set new element_array_id, looping around if it's at 2 
