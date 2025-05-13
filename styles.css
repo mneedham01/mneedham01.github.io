@@ -6,6 +6,7 @@ body{
 
 button {
     background-color: #edeae0;
+    font-family: "Helvetica Neue";
     border: none;
     font-size: 20px;
     margin: 10px;
@@ -27,6 +28,7 @@ button:focus{
     font-size: 40px;
     margin-left: 15px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .river-img {
@@ -40,4 +42,16 @@ button:focus{
     display: flex;
     flex-wrap: wrap;
     top: 60%;
+}
+
+.content-container{
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    color: white;
+    margin: 10px; 
+}
+
+.writ-speak, .installation, .web-design, .music-tech, .about{
+    position: absolute;
+    visibility: hidden;
 }

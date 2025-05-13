@@ -16,46 +16,54 @@
 
     <!-- Buttons -->
     <div class = "menu-container">
-        <button>writing + speaking</button>
-        <button>installations</button>
-        <button>web design</button>
-        <button>music technology</button>
-        <button>about me</button>
+        <button onclick = "content('writ-speak')">writing + speaking</button>
+        <button onclick = "content('installation')">installations</button>
+        <button onclick = "content('web-design')">web design</button>
+        <button onclick = "content('music-tech')">music technology</button>
+        <button onclick = "content('about')">about me</button>
     </div>
 
-    <!-- Writing and Speaking -->
-    <div class = "writ-speak-container">
-        <!-- Upcoming -->
-            <!-- NIME -->
-            <!-- Lesbian Lives  -->
-        <!-- Vienna After Dark -->
-        <!-- GELSS -->
-        <!-- Shygirl Review -->
-    </div>
+    <!-- Content -->
+    <div class = "content-container" id = "container"> 
 
-    <!-- Installations  -->
-    <div class = "installation-container">
-        <!-- CSC installation -->
-        <!-- Art installation : lockers -->
-        <!-- Art installation : pond -->
-    </div>
+        <!-- Writing and Speaking -->
+        <div id = "writ-speak" class = "writ-speak">
+           writing writing speaking speaking
+                <!-- NIME -->
+                <!-- Lesbian Lives  -->
+            <!-- Vienna After Dark -->
+            <!-- GELSS -->
+            <!-- Shygirl Review -->
+        </div>
 
-    <!-- Creative Web Design / Poetic Computation -->
-    <div class = "writ-speak-container">
-        <!-- Emulate Website -->
-        <!-- My Music, My Self -->
-        <!-- Graphic Experimental Music Score -->
-    </div>
+        <!-- Installations  -->
+        <div id = "installation" class = "installation">
+            Installation Installation
+            <!-- CSC installation -->
+            <!-- Art installation : lockers -->
+            <!-- Art installation : pond -->
+        </div>
 
-    <!-- Music Technology -->
-    <div class = "writ-speak-container">
-        <!-- Puara-gestures -->
-        <!-- Earsketch -->
-    </div>
+        <!-- Creative Web Design / Poetic Computation -->
+        <div id = "web-design" class = "web-design">
+            Web web web
+            <!-- Emulate Website -->
+            <!-- My Music, My Self -->
+            <!-- Graphic Experimental Music Score -->
+        </div>
 
-    <!-- About Me -->
-    <div class = "writ-speak-container">
-        <!-- Graduated from Smith 2025 -->
-        <!-- Interested in many different practices  -->
+        <!-- Music Technology -->
+        <div id = "music-tech" class = "music-tech">
+            Music Music music
+            <!-- Puara-gestures -->
+            <!-- Earsketch -->
+        </div>
+
+        <!-- About Me -->
+        <div id = "about" class = "about">
+            About about about
+            <!-- Graduated from Smith 2025 -->
+            <!-- Interested in many different practices  -->
+        </div>
     </div>
 </body>
