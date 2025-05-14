@@ -1,6 +1,13 @@
 a {
     color: #edeae0;
 }
+
+p{
+    font-family: "Helvetica Neue";
+    font-size: 15px;
+    color: white;
+    margin: 20px; 
+}
 body{
     background-color: black;
     width: 100vw;
