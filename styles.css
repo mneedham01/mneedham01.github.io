@@ -1,9 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/apple-chancery');
+
 a {
     color: #edeae0;
 }
 
 p{
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     font-size: 15px;
     color: white;
     margin: 20px; 
@@ -16,7 +18,7 @@ body{
 
 button {
     background-color: #edeae0;
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     border: none;
     font-size: 20px;
     margin: 10px;
@@ -30,11 +32,11 @@ button:hover{
 
 .portfolio-title{
     color: white;
-    font-family: "Apple Chancery", "cursive";
+    font-family: 'Apple Chancery', sans-serif;
     font-size: 40px;
     margin-left: 15px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .portfolio-title:hover{
@@ -66,4 +68,50 @@ button:hover{
     visibility: visible;
     width: 80%;
     margin-left: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    /* Make title bigger */
+    .portfolio-title{
+        color: white;
+        font-family: 'Apple Chancery', sans-serif;
+        font-size: 30px;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Make picture bigger */
+    .river-img {
+        width: 100vw;
+        height: 12vh;
+        margin-left: 0px;
+    }
+
+    /* Make buttons bigger */
+    button {
+        background-color: #edeae0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+        border: none;
+        font-size: 20px;
+        margin: 10px;
+        padding: 5px 12px;
+        text-align: center;
+    }
+
+    /* Make text bigger */
+    .writ-speak, .installation, .web-design, .music-tech, .about{
+        position: absolute;
+        visibility: visible;
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    .content-container{
+    font-size: 20px;
+    font-family: "Helvetica Neue";
+    color: white;
+    margin: 10px; 
+}
+
 }
