@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class = "head">
+    <meta charset="UTF-8">
+    <title>maggie needham's portfolio</title>
+    <link rel="icon" type="image/jpg" href="./../images/m.jpg">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <script src="../src.js"></script>
+</head>
+
+<body id = "body">
+    <!-- Title -->
+    <div class = "portfolio-title" onclick = "window.location.href = '../index.html'">maggie needham's portfolio</div>
+
+
+    <!-- Image -->
+    <img class = "river-img" src= "../images/river.jpg"> </img>
+
+    <!-- Buttons -->
+    <div class = "menu-container">
+        <button onclick = "window.location.href='web-design.html'">creative web design</button>
+        <button onclick = "window.location.href='writ-speak.html'">writing + speaking</button>
+        <button onclick = "window.location.href='installation.html'">installations</button>
+        <button onclick = "window.location.href='music-tech.html'">music technology</button>
+        <button id = "about" onclick = "window.location.href='about.html'">my links</button>
+    </div>
+
+    <!-- Content -->
+    <div class = "content-container" id = "container"> 
+        <!-- About Me -->
+        <div id = "about" class = "about">
+
+            <!-- Links -->
+            <a target="_blank" href = "https://www.are.na/maggie-needham/channels">are.na</a>
+            <br>
+            <a target="_blank" href = "https://www.linkedin.com/in/maggie-needham-3a838a20b">LinkedIn</a>
+            <br>
+            <a target="_blank" href = "https://github.com/mneedham01">GitHub</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.addEventListener("load", (event) => {
+        var elem = document.getElementById("about");
+        elem.style.backgroundColor = "#b1ada3"
+    });
+</script>

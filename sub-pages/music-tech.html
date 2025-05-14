@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class = "head">
+    <meta charset="UTF-8">
+    <title>maggie needham's portfolio</title>
+    <link rel="icon" type="image/jpg" href="./../images/m.jpg">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <script src="../src.js"></script>
+</head>
+
+<body id = "body">
+    <!-- Title -->
+    <div class = "portfolio-title" onclick = "window.location.href = '../index.html'">maggie needham's portfolio</div>
+
+
+    <!-- Image -->
+    <img class = "river-img" src= "../images/river.jpg"> </img>
+
+    <!-- Buttons -->
+    <div class = "menu-container">
+        <button onclick = "window.location.href='web-design.html'">creative web design</button>
+        <button onclick = "window.location.href='writ-speak.html'">writing + speaking</button>
+        <button onclick = "window.location.href='installation.html'">installations</button>
+        <button id = "music-tech" onclick = "window.location.href='music-tech.html'">music technology</button>
+        <button onclick = "window.location.href='about.html'">my links</button>
+    </div>
+
+    <!-- Content -->
+    <div class = "content-container" id = "container">
+        <!-- Music Technology -->
+        <div id = "music-tech" class = "music-tech">
+            <!-- Puara-gestures -->
+            <b>Porting Gestures to <a target="_blank" href = "https://github.com/Puara/puara-gestures">puara-gestures</a></b>
+            <br>
+            The Puara Framework, an open source library and toolbox, seeks
+            to lower the high barriers of entry to New Interface for Music
+            Expression (NIME) creation. The most recent update to Puara
+            generalizes the expertise in gestural control of T-Stick performers
+            and designers, utilizing a decades-old knowledge base for the
+            creation, maintenance, and performance of other digital musical
+            instruments. Two new gestures, roll and tilt, were ported into
+            the puara-gestures library from the T-Stick, allowing a broader
+            audience of artists and researchers to access these gestural mappings. This expansion of the Puara library continues the mission
+            of creating tools by building on the legacy of historical NIMEs.
+            <!-- Earsketch -->
+            <br><br>
+            <b>Audio Effects Curriculum + New Features in <a target="_blank" href = "https://earsketch.gatech.edu/landing/#/">EarSketch</a></b>
+            <br>
+            EarSketch is an educational digital audio workstation that engages middle and high schoolers with musical programming. 
+            I wrote educational material on audio effects, integrating examples into 
+            the EarSketch website with descriptions based on the cultural uses and 
+            physics of sound. I also refactored buggy audio features and implemented a new
+            widget that allows users to preview coded beats, connecting the technical 
+            and creative processes of music making.
+            
+        </div>
+    </div>
+</body>
+
+<script>
+    window.addEventListener("load", (event) => {
+        var elem = document.getElementById("music-tech");
+        elem.style.backgroundColor = "#b1ada3"
+    });
+</script>

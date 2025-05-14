@@ -28,10 +28,6 @@ button:hover{
     background-color: #cdc9bf;
 }
 
-button:focus{
-    background-color: #b1ada3;
-}
-
 .portfolio-title{
     color: white;
     font-family: "Apple Chancery", "cursive";
@@ -39,7 +35,10 @@ button:focus{
     margin-left: 15px;
     margin-top: 20px;
     margin-bottom: 10px;
+}
 
+.portfolio-title:hover{
+    color: #cdc9bf;
 }
 
 .river-img {
@@ -64,7 +63,7 @@ button:focus{
 
 .writ-speak, .installation, .web-design, .music-tech, .about{
     position: absolute;
-    visibility: hidden;
+    visibility: visible;
     width: 80%;
     margin-left: 10px;
 }

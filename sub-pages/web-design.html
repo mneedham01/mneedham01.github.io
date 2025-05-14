@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class = "head">
+    <meta charset="UTF-8">
+    <title>maggie needham's portfolio</title>
+    <link rel="icon" type="image/jpg" href="./../images/m.jpg">
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <script src="../src.js"></script>
+</head>
+
+<body id = "body">
+    <!-- Title -->
+    <div class = "portfolio-title" onclick = "window.location.href = '../index.html'">maggie needham's portfolio</div>
+
+    <!-- Image -->
+    <img class = "river-img" src= "../images/river.jpg"> </img>
+
+    <!-- Buttons -->
+    <div class = "menu-container">
+        <button id = "web-design" onclick = "window.location.href='web-design.html'">creative web design</button>
+        <button onclick = "window.location.href='writ-speak.html'">writing + speaking</button>
+        <button onclick = "window.location.href='installation.html'">installations</button>
+        <button onclick = "window.location.href='music-tech.html'">music technology</button>
+        <button onclick = "window.location.href='about.html'">my links</button>
+    </div>
+
+    <!-- Content -->
+    <div class = "content-container" id = "container">
+        <!-- Creative Web Design / Poetic Computation -->
+        <div id = "web-design" class = "web-design">
+            <!-- Emulate Website -->
+            <a target="_blank" href = "https://www.emulatemagazine.com/">Emulate Magazine</a>
+            <br>
+            Emulate Magazine is an arts, literature, and culture magazine dedicated to creating community in the Pioneer Valley. This site,
+            which is a work in progress, was co-designed with Buddy Luong. 
+            <br><br>
+            <!-- My Music, My Self -->
+            <a target="_blank" href = "../my-music-my-self/start/start.html">My Music, My Self</a>
+            <br> 
+            A choose-your-own-adventure essay reflecting on the relationship between the construction of the self and music in the streaming era. 
+            <br><br>
+            <!-- Graphic Experimental Music Score -->
+            <a target="_blank" href = "../score/start/start.html">Graphic Experimental Music Score</a>
+            <br>
+            An assignment for an <i>Experimental Music</i> class. 
+            <br><br>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.addEventListener("load", (event) => {
+        var elem = document.getElementById("web-design");
+        elem.style.backgroundColor = "#b1ada3"
+    });
+</script>
