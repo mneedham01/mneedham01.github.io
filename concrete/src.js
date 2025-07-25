@@ -27,7 +27,7 @@ function changePic() {
 
         background.style.backgroundImage = pic_name;
         lastPic = pic_num;
-    }, 800);
+    }, 1000);
 }
 
 function randomNumber(min, max){
